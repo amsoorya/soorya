@@ -11,44 +11,9 @@
   </style>
 </head>
 <body>
-  <h1 id="response">Will you buy me biriyani ?</h1>
+  <h1 id="response">Do you like this content?</h1>
   <button onclick="vote('yes')">Yes</button>
   <button onclick="vote('no')">No</button>
-  <script>
-    function vote(choice) {
-      const responseElement = document.getElementById('response');
-      const yesButton = document.querySelector('button:nth-of-type(1)');
-      
-      switch(choice) {
-        case 'no':
-          switch(responseElement.textContent) {
-            case 'Do you like this content?':
-              responseElement.textContent = 'I will get angry!';
-              break;
-            case 'I will get angry!':
-              responseElement.textContent = 'I won\'t speak!';
-              break;
-            case 'I won\'t speak!':
-              responseElement.textContent = 'Really?';
-              break;
-            case 'Really?':
-              responseElement.textContent = 'I will come to your home!';
-              break;
-            default:
-              responseElement.textContent = 'I will come to your home!';
-              break;
-          }
-          yesButton.style.fontSize = parseInt(window.getComputedStyle(yesButton).fontSize) + 5 + 'px';
-          break;
-        case 'yes':
-          if (responseElement.textContent === 'I will come to your home!') {
-            alert('I will come to your home');
-          }
-          break;
-        default:
-          break;
-      }
-    }
-  </script>
+  <script src="script.js"></script>
 </body>
 </html>
